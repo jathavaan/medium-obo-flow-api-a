@@ -1,14 +1,13 @@
 package com.example.mediumoboflowapia.userService
 
 import io.github.serpro69.kfaker.Faker
-import org.springframework.security.oauth2.core.oidc.user.OidcUser
 import org.springframework.stereotype.Service
 import java.util.*
 import kotlin.random.Random
 
 @Service
 class UserService {
-    fun getUsersByRole(authUser: OidcUser, userRole: UserRole): List<UserDto> {
+    fun getUsersByRole(userRole: UserRole): List<UserDto> {
         val users = generateUsers()
         return users.filter { it.userRole == userRole.value }
     }

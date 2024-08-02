@@ -5,5 +5,5 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          audiences: 0da16ed2-6da5-44ab-9ab6-94890526fb96
-          issuer-uri: https://sts.windows.net/7c33127a-4fb5-42da-9d04-71671e149212/
+          audiences: ${OBO_API_A_CLIENT_ID}
+          issuer-uri: https://sts.windows.net/<tenant-id>/

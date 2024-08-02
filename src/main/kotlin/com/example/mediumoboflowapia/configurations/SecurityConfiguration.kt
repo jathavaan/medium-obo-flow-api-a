@@ -28,7 +28,7 @@ class SecurityConfiguration(
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http.authorizeHttpRequests { requests ->
             requests
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "actuator/health", "actuator/prometheus")
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**")
                 .permitAll()
                 .anyRequest().authenticated()
         }.oauth2ResourceServer { oauth2 ->
